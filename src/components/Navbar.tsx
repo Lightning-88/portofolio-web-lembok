@@ -6,12 +6,12 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <header className="fixed shadow-lg shadow-shadow-black h-14 px-4 w-full md:px-16">
+    <header className="fixed shadow-lg shadow-shadow-black h-14 px-4 w-full bg-stone-800 md:px-16">
       <nav className="flex justify-between items-center h-full mx-auto max-w-screen-xl">
         <div className="flex">
           <Link to="/">
             <h1 className="font-bold">
-              Lembok<span className="text-green-600">Chess</span>
+              Lembok<span className="text-amber-500">Chess</span>
             </h1>
           </Link>
         </div>
@@ -27,22 +27,22 @@ export function Navbar() {
           >
             <Link to="/">
               <h1 className="font-bold">
-                Lembok<span className="text-green-600">Chess</span>
+                Lembok<span className="text-amber-500">Chess</span>
               </h1>
             </Link>
             <X />
           </button>
           <div className="flex flex-col space-y-4 md:flex-row md:gap-6 md:space-y-0">
-            <Link to="index.html" className="inline w-fit hover:text-green-600">
+            <Link to="/" className="inline w-fit hover:text-amber-500">
               Home
             </Link>
-            <Link to="" className="inline w-fit hover:text-green-600">
+            <Link to="/profile" className="inline w-fit hover:text-amber-500">
               Profile
             </Link>
-            <Link to="" className="inline w-fit hover:text-green-600">
+            <Link to="/games" className="inline w-fit hover:text-amber-500">
               Games
             </Link>
-            <Link to="" className="inline w-fit hover:text-green-600">
+            <Link to="/contacts" className="inline w-fit hover:text-amber-500">
               Contact
             </Link>
           </div>
