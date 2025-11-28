@@ -9,6 +9,11 @@ export function Separator({
   ...props
 }: SeparatorProps) {
   return (
-    <div className={`border border-stone-700 ${className}`} {...props}></div>
+    <div
+      className={`border border-stone-700 ${className} ${
+        orientation == "vertical" ? "rotate-90" : "rotate-0"
+      }`}
+      {...props}
+    ></div>
   );
 }

@@ -1,4 +1,10 @@
+import {
+  LucideChessBishop,
+  LucideChessKnight,
+  LucideChessPawn,
+} from "lucide-react";
 import lembokPicture from "../assets/lembok.png";
+import achivementRapidElo from "../assets/achivementRapidElo.png";
 import { Button } from "../components/Button";
 import { Separator } from "../components/Separator";
 
@@ -12,7 +18,7 @@ export default function HomePage() {
             <h2 className="font-bold text-3xl">
               I am <span className="text-amber-500">Diaz Jagad</span>
             </h2>
-            <p className="text-sm text-stone-400">Chess Player</p>
+            <p className="text-sm text-stone-400">Intermediate Chess Player</p>
           </div>
           <p className="text-sm text-justify text-stone-400 leading-relaxed">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
@@ -25,17 +31,14 @@ export default function HomePage() {
             tempora obcaecati aperiam corporis.
           </p>
           <div>
-            <a
-              href="https://www.chess.com/member/musuhpakrt/games"
-              target="_blank"
-            >
-              <Button className="cursor-pointer">View Games</Button>
+            <a href="https://www.chess.com/member/musuhpakrt" target="_blank">
+              <Button className="cursor-pointer">View Profile</Button>
             </a>
           </div>
         </div>
 
         <div>
-          <img src={lembokPicture} alt="hero-picture" />
+          <img src={lembokPicture} className="rounded-sm" alt="hero-picture" />
         </div>
       </div>
 
@@ -53,17 +56,17 @@ export default function HomePage() {
           like Mikhail Tal. I've been play chess since 2023.
         </p>
         <div className="grid grid-cols-3 gap-4">
-          <div className="p-3 rounded-xl bg-stone-900 text-center">
+          <div className="p-3 rounded-xl bg-stone-900 text-center hover:scale-105 hover:transition-transform">
             <p className="text-xs text-stone-300">Blitz Rating</p>
-            <p className="font-bold">1083</p>
+            <p className="font-bold">1183+</p>
           </div>
-          <div className="p-3 rounded-xl bg-stone-900 text-center">
+          <div className="p-3 rounded-xl bg-stone-900 text-center hover:scale-105 hover:transition-transform">
             <p className="text-xs text-stone-300">Rapid Rating</p>
-            <p className="font-bold">1706</p>
+            <p className="font-bold">1706+</p>
           </div>
-          <div className="p-3 rounded-xl bg-stone-900 text-center">
+          <div className="p-3 rounded-xl bg-stone-900 text-center hover:scale-105 hover:transition-transform">
             <p className="text-xs text-stone-300">Bullet Rating</p>
-            <p className="font-bold">840</p>
+            <p className="font-bold">940+</p>
           </div>
         </div>
       </div>
@@ -99,6 +102,11 @@ export default function HomePage() {
               Solid defense under preasure
             </p>
           </div>
+          <div className="p-4 rounded-md border border-stone-700 text-center">
+            <p className="text-stone-300 text-sm font-medium">
+              Good Emotional Control
+            </p>
+          </div>
         </div>
 
         <div className="p-4 rounded-md border border-stone-700 bg-stone-800">
@@ -108,14 +116,13 @@ export default function HomePage() {
 
           <div className="mt-2 space-y-1">
             <p className="text-sm text-stone-300">
-              <span className="text-stone-400">As White:</span> Catalan
+              <span>As White:</span> Vienna Gambit
             </p>
             <p className="text-sm text-stone-300">
-              <span className="text-stone-400">Vs 1.e4:</span> Caro-Kann /
-              Modern Defense
+              <span>Vs 1.e4:</span> Caro-Kann / Modern Defense
             </p>
             <p className="text-sm text-stone-300">
-              <span className="text-stone-400">Vs 1.d4:</span> Dutch Defense
+              <span>Vs 1.d4:</span> Dutch Defense
             </p>
           </div>
         </div>
@@ -123,7 +130,7 @@ export default function HomePage() {
 
       <Separator className="mx-4 -mt-2" />
 
-      <div className="space-y-4 p-4 bg-stone-800">
+      <div className="mt-8 space-y-4 p-4 bg-stone-800">
         <h1 className="text-center text-2xl font-bold text-stone-100">
           Game Highlights
         </h1>
@@ -132,41 +139,89 @@ export default function HomePage() {
         </p>
 
         <div className="space-y-4">
-          <div className="p-4 rounded-md border border-stone-700 space-y-1">
-            <p className="text-stone-300 text-sm font-semibold">
-              Rapid vs raffa-BOT
-            </p>
-            <p className="text-xs text-emerald-500">Win</p>
-            <a
-              href="https://www.chess.com/game/computer/474142917"
-              className="text-xs text-blue-600 underline"
-            >
-              View Game
-            </a>
+          <div className="p-4 rounded-md border border-stone-700 flex justify-between">
+            <div className="space-y-1">
+              <p className="text-stone-300 text-sm font-semibold">
+                Rapid vs raffa-BOT
+              </p>
+              <p className="text-xs text-emerald-500">Win</p>
+              <a
+                href="https://www.chess.com/game/computer/474142917"
+                className="text-xs text-blue-500 underline"
+              >
+                View Game
+              </a>
+            </div>
+            <LucideChessKnight strokeWidth={0.1} width={70} height={70} />
           </div>
-          <div className="p-4 rounded-md border border-stone-700 space-y-1">
-            <p className="text-stone-300 text-sm font-semibold">
-              Rapid vs senya973
-            </p>
-            <p className="text-xs text-emerald-500">Win</p>
-            <a
-              href="https://www.chess.com/game/live/145985049658?username=musuhpakrt"
-              className="text-xs text-blue-600 underline"
-            >
-              View Game
-            </a>
+          <div className="p-4 rounded-md border border-stone-700 flex justify-between">
+            <div className="space-y-1">
+              <p className="text-stone-300 text-sm font-semibold">
+                Rapid vs senya973
+              </p>
+              <p className="text-xs text-emerald-500">Win</p>
+              <a
+                href="https://www.chess.com/game/live/145985049658?username=musuhpakrt"
+                className="text-xs text-blue-500 underline"
+              >
+                View Game
+              </a>
+            </div>
+            <LucideChessBishop strokeWidth={0.1} width={70} height={70} />
           </div>
-          <div className="p-4 rounded-md border border-stone-700 space-y-1">
-            <p className="text-stone-300 text-sm font-semibold">
-              Rapid vs ManyaTheQueen
+          <div className="p-4 rounded-md border border-stone-700 flex justify-between">
+            <div className="space-y-1">
+              <p className="text-stone-300 text-sm font-semibold">
+                Rapid vs ManyaTheQueen
+              </p>
+              <p className="text-xs text-emerald-500">Win</p>
+              <a
+                href="https://www.chess.com/game/live/145930117362?username=musuhpakrt"
+                className="text-xs text-blue-500 underline"
+              >
+                View Game
+              </a>
+            </div>
+            <LucideChessPawn strokeWidth={0.1} width={70} height={70} />
+          </div>
+        </div>
+      </div>
+
+      <Separator className="mx-4" />
+
+      <div className="-mt-6 space-y-4 p-4">
+        <h1 className="text-center text-2xl font-bold text-stone-100">
+          Achievements
+        </h1>
+
+        <div className="flex justify-between gap-4">
+          <img
+            src={achivementRapidElo}
+            className="rounded-sm flex-1"
+            alt="achivement-image"
+          />
+          <div className="space-y-1 flex-1">
+            <h1 className="text-stone-300 text-sm font-semibold">
+              Reached Elo 1700+ (2025)
+            </h1>
+            <p className="text-stone-400 text-sm font-medium">
+              Rating peak 1706 Rapid
             </p>
-            <p className="text-xs text-emerald-500">Win</p>
-            <a
-              href="https://www.chess.com/game/live/145930117362?username=musuhpakrt"
-              className="text-xs text-blue-600 underline"
-            >
-              View Game
-            </a>
+          </div>
+        </div>
+        <div className="flex justify-between gap-4">
+          <img
+            src={achivementRapidElo}
+            className="rounded-sm flex-1"
+            alt="achivement-image"
+          />
+          <div className="space-y-1 flex-1">
+            <h1 className="text-stone-300 text-sm font-semibold">
+              Local Champion (2025)
+            </h1>
+            <p className="text-stone-400 text-sm font-medium">
+              4st place village chess event
+            </p>
           </div>
         </div>
       </div>

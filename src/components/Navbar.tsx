@@ -1,12 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (isOpen) setIsOpen(false);
+  }, [location.pathname]);
 
   return (
-    <header className="fixed shadow-lg shadow-shadow-black h-14 px-4 w-full bg-stone-800 md:px-16">
+    <header className="fixed shadow-lg z-20 shadow-shadow-black h-14 px-4 w-full bg-stone-800 md:px-13">
       <nav className="flex justify-between items-center h-full mx-auto max-w-screen-xl">
         <div className="flex">
           <Link to="/">
