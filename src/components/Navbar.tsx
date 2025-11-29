@@ -12,7 +12,7 @@ export function Navbar() {
 
   return (
     <header className="fixed shadow-lg z-20 shadow-shadow-black h-14 px-4 w-full bg-stone-800 md:px-13">
-      <nav className="flex justify-between items-center h-full mx-auto max-w-screen-xl">
+      <nav className="flex justify-between items-center h-full mx-auto container">
         <div className="flex">
           <Link to="/">
             <h1 className="font-bold">
