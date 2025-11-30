@@ -40,7 +40,7 @@ export default function HomePage() {
         <div className="md:flex-1">
           <img
             src={lembokPicture}
-            className="rounded-sm md:max-w-[400px] lg:max-w-[500px]"
+            className="rounded-sm w-full lg:max-h-[500px] object-contain"
             alt="hero-picture"
           />
         </div>
