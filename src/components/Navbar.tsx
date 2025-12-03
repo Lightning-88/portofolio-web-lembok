@@ -10,6 +10,17 @@ export function Navbar() {
     if (isOpen) setIsOpen(false);
   }, [location.pathname]);
 
+  const Overlay = () => {
+    return (
+      <div
+        className="z-30 h-screen fixed top-0 left-0 right-0 bottom-0 bg-[rgba(0,0,0,0.8)] md:hidden"
+        onClick={() => {
+          setIsOpen(false);
+        }}
+      ></div>
+    );
+  };
+
   return (
     <header className="fixed shadow-lg z-20 shadow-shadow-black h-14 px-4 w-full bg-stone-800 md:px-13">
       <nav className="flex justify-between items-center h-full mx-auto container">
@@ -20,6 +31,8 @@ export function Navbar() {
             </h1>
           </Link>
         </div>
+
+        {isOpen ? <Overlay /> : <></>}
 
         <div
           className={`flex flex-col h-full w-64 fixed right-0 top-0 bg-bg-pri pt-4 p-4 z-50 bg-stone-800 ${

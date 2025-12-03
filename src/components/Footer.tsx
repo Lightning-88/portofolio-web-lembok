@@ -1,13 +1,11 @@
-import { ChessPawnIcon } from "lucide-react";
-import { Facebook, Instagram, Twitter } from "react-feather";
+import { ChessPawnIcon, Mail } from "lucide-react";
+import { Facebook, Instagram } from "react-feather";
 
 export function Footer() {
   return (
     <div className="w-full bg-stone-800">
       <div className="container space-y-4 mx-auto text-center p-4">
-        <div>
-          <h1>1wakpeyekk@gmail.com</h1>
-        </div>
+        <h1 className="font-light">MusuhPakRT - Chess Player</h1>
         <div className="flex justify-center gap-4">
           <a
             href="https://www.facebook.com/profile.php?id=100080808014046"
@@ -23,8 +21,11 @@ export function Footer() {
           >
             <Instagram className="text-stone-400" />
           </a>
-          <a href="/" className="hover:scale-105 hover:transition-transform">
-            <Twitter className="text-stone-400" />
+          <a
+            href="mailto:1wakpeyekk@gmail.com"
+            className="hover:scale-105 hover:transition-transform"
+          >
+            <Mail className="text-stone-400" />
           </a>
           <a
             href="https://www.chess.com/member/musuhpakrt"
@@ -34,11 +35,10 @@ export function Footer() {
             <ChessPawnIcon className="text-stone-400" />
           </a>
         </div>
-        <div>
-          © {new Date().getFullYear()} Lembok Chess
-          <br />
-          All rights reserved
-        </div>
+        <p className="font-light">
+          Built with focus, cigarette, and bit of chaos
+        </p>
+        <p className="font-light">© {new Date().getFullYear()} Lembok Chess</p>
       </div>
     </div>
   );

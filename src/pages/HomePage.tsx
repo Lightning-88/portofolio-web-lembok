@@ -1,4 +1,5 @@
 import {
+  ArrowRight,
   LucideChessBishop,
   LucideChessKnight,
   LucideChessPawn,
@@ -13,26 +14,33 @@ export default function HomePage() {
     <div className="space-y-6">
       <div className="min-h-screen flex items-center justify-center flex-col gap-4 pt-4 px-4 md:flex-row md:gap-6 lg:gap-8">
         <div className="space-y-2 md:flex-1">
-          <h1 className="font-bold text-2xl">Hello Blud</h1>
+          <h1 className="font-bold text-2xl md:text-3xl">Hello Blud</h1>
           <div className="space-y-2">
-            <h2 className="font-bold text-3xl">
+            <h2 className="font-bold text-4xl">
               I am <span className="text-amber-500">Diaz Jagad</span>
             </h2>
-            <p className="text-sm text-stone-400">Intermediate Chess Player</p>
+            <p className="text-sm text-stone-400 md:text-base">
+              Intermediate Chess Player
+            </p>
           </div>
-          <p className="text-sm text-justify text-stone-400 leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
-            molestiae aspernatur sit corrupti odit molestias perspiciatis natus
-            tenetur, repudiandae consequuntur facilis illum perferendis
-            consectetur rem pariatur quaerat alias, quis aliquid. Vel, velit!
-            Obcaecati officia, praesentium exercitationem laboriosam magni quae
-            natus, placeat omnis expedita possimus nostrum labore! Facilis,
-            perferendis sint iusto ut debitis accusamus incidunt temporibus sed
-            tempora obcaecati aperiam corporis.
+          <p className="text-sm text-justify text-stone-400 leading-relaxed md:text-xl">
+            I approach chess with an aggressive, initiative-driven style, always
+            looking for creative tactics, sharp positions, and decisive
+            breakthroughs. Each game is a test of calculation, resilience, and
+            discipline. I strive to grow stronger with every match, continuously
+            expanding my repertoire and sharpening my intuition across all time
+            controls.
           </p>
           <div>
-            <a href="https://www.chess.com/member/musuhpakrt" target="_blank">
-              <Button className="cursor-pointer">View Profile</Button>
+            <a
+              href="https://www.chess.com/member/musuhpakrt"
+              className="inline-block"
+              target="_blank"
+            >
+              <Button className="cursor-pointer flex items-center gap-2 rounded-3xl">
+                View Profile
+                <ArrowRight size={20} />
+              </Button>
             </a>
           </div>
         </div>
@@ -48,14 +56,14 @@ export default function HomePage() {
 
       <Separator className="mx-4" />
 
-      <div className="space-y-4 bg-stone-800 p-4 md:p-8">
+      <div className="space-y-4 bg-stone-800 p-4 md:p-8 md:space-y-5">
         <h1 className="text-center text-2xl font-bold text-stone-100">
           About Me
         </h1>
         <p className="text-center text-stone-300 text-sm">
           Chess Player - Strategic Thinker - Competitor
         </p>
-        <p className="text-stone-300 leading-relaxed text-justify">
+        <p className="text-stone-300 leading-relaxed text-justify md:text-center">
           I am a Chess player who focuses on positional strategy and attractions
           like Mikhail Tal. I've been play chess since 2023.
         </p>
@@ -77,7 +85,7 @@ export default function HomePage() {
 
       <Separator className="mx-4" />
 
-      <div className="-mt-6 space-y-4 p-4 md:p-8">
+      <div className="-mt-6 space-y-4 p-4 md:p-8 md:space-y-5">
         <h1 className="text-center text-2xl font-bold text-stone-100">
           Style & Strength
         </h1>
@@ -90,23 +98,23 @@ export default function HomePage() {
           aim to create constant pressure over the board.
         </p>
 
-        <div className="space-y-4">
-          <div className="p-4 rounded-md border border-stone-700 text-center">
+        <div className="space-y-4 md:flex md:space-y-0 md:gap-4 md:justify-center">
+          <div className="p-4 rounded-md border border-stone-700 text-center md:flex-1">
             <p className="text-stone-300 text-sm font-medium">
               Strong opening preparation
             </p>
           </div>
-          <div className="p-4 rounded-md border border-stone-700 text-center">
+          <div className="p-4 rounded-md border border-stone-700 text-center md:flex-1">
             <p className="text-stone-300 text-sm font-medium">
               Fast and Accurate Calculation
             </p>
           </div>
-          <div className="p-4 rounded-md border border-stone-700 text-center">
+          <div className="p-4 rounded-md border border-stone-700 text-center md:flex-1">
             <p className="text-stone-300 text-sm font-medium">
               Solid defense under preasure
             </p>
           </div>
-          <div className="p-4 rounded-md border border-stone-700 text-center">
+          <div className="p-4 rounded-md border border-stone-700 text-center md:flex-1">
             <p className="text-stone-300 text-sm font-medium">
               Good Emotional Control
             </p>
@@ -134,7 +142,7 @@ export default function HomePage() {
 
       <Separator className="mx-4 -mt-2" />
 
-      <div className="mt-8 space-y-4 p-4 bg-stone-800 md:p-8">
+      <div className="mt-8 space-y-4 p-4 bg-stone-800 md:p-8 md:space-y-5">
         <h1 className="text-center text-2xl font-bold text-stone-100">
           Game Highlights
         </h1>
@@ -142,8 +150,8 @@ export default function HomePage() {
           A selection of my highlights
         </p>
 
-        <div className="space-y-4">
-          <div className="p-4 rounded-md border border-stone-700 flex justify-between">
+        <div className="space-y-4 md:flex md:space-y-0 md:gap-4 md:justify-center">
+          <div className="p-4 rounded-md border border-stone-700 flex justify-between md:flex-1">
             <div className="space-y-1">
               <p className="text-stone-300 text-sm font-semibold">
                 Rapid vs raffa-BOT
@@ -158,7 +166,7 @@ export default function HomePage() {
             </div>
             <LucideChessKnight strokeWidth={0.1} width={70} height={70} />
           </div>
-          <div className="p-4 rounded-md border border-stone-700 flex justify-between">
+          <div className="p-4 rounded-md border border-stone-700 flex justify-between md:flex-1">
             <div className="space-y-1">
               <p className="text-stone-300 text-sm font-semibold">
                 Rapid vs senya973
@@ -173,7 +181,7 @@ export default function HomePage() {
             </div>
             <LucideChessBishop strokeWidth={0.1} width={70} height={70} />
           </div>
-          <div className="p-4 rounded-md border border-stone-700 flex justify-between">
+          <div className="p-4 rounded-md border border-stone-700 flex justify-between md:flex-1">
             <div className="space-y-1">
               <p className="text-stone-300 text-sm font-semibold">
                 Rapid vs ManyaTheQueen
@@ -193,7 +201,7 @@ export default function HomePage() {
 
       <Separator className="mx-4" />
 
-      <div className="-mt-6 space-y-4 p-4 md:p-8">
+      <div className="-mt-6 space-y-4 p-4 md:p-8 md:space-y-5">
         <h1 className="text-center text-2xl font-bold text-stone-100">
           Achievements
         </h1>
