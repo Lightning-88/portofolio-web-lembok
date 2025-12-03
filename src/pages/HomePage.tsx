@@ -12,7 +12,7 @@ import { Separator } from "../components/Separator";
 export default function HomePage() {
   return (
     <div className="space-y-6">
-      <div className="min-h-screen flex items-center flex-col gap-4 pt-4 px-4 md:flex-row md:gap-6 lg:gap-8">
+      <div className="min-h-screen flex items-center justify-center flex-col gap-4 pt-4 px-4 md:flex-row md:gap-6 lg:gap-8">
         <div className="space-y-2 md:flex-1">
           <h1 className="font-bold text-2xl lg:text-3xl">Hello Blud</h1>
           <div className="space-y-2">
@@ -54,7 +54,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <Separator className="mx-4" />
+      <Separator className="mx-4 -mt-6" />
 
       <div className="space-y-4 bg-stone-800 p-4 md:p-8 md:space-y-5">
         <h1 className="text-center text-2xl font-bold text-stone-100 lg:text-3xl">
