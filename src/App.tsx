@@ -9,7 +9,7 @@ export default function App() {
       <div className="text-stone-100 bg-stone-900 font-custom">
         <Navbar />
         <div className="w-full min-h-dvh">
-          <div className="container mx-auto pt-8 md:pt-0">
+          <div className="container mx-auto pt-4 md:pt-0">
             <Routes>
               <Route path="/" element={<HomePage />}></Route>
             </Routes>
